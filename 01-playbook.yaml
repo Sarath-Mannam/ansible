@@ -1,0 +1,10 @@
+# Playbook
+name: ping the node # name of the playbook
+hosts: mongodb # To which host you are connecting
+
+#this is list of tasks/modules/collections
+tasks:
+- name: pinging the server # representing the list with -
+  ansible.builtin.ping:    # this is the map
+
+
