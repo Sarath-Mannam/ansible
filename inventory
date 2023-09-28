@@ -1,0 +1,31 @@
+192.168.2.1
+172.35.36.96
+
+[mongodb] # This server belongs to mongodb group
+roboshop-us-dev-db-mongodb-01.sarathmannam.online
+
+[mysql] # This server belongs to mysql group
+roboshop-us-dev-db-mysql-01.sarathmannam.online
+roboshop-us-dev-db-mysql-02.sarathmannam.online
+
+[cart] # This server belongs to cart group
+roboshop-in-prod-app-cart-01.sarathmannam.online
+roboshop-in-prod-app-cart-02.sarathmannam.online
+roboshop-in-prod-app-cart-03.sarathmannam.online
+
+[user] # This server belongs to user group
+roboshop-in-prod-app-user-01.sarathmannam.online
+roboshop-in-prod-app-user-02.sarathmannam.online
+
+
+# whenever there is an update for cart component you can just refer to this cart group at a time we can fetch all the servers and you can push the update, so that is the advantage with the groups.
+
+[db:children] #this is group of groups it has mongodb & mysql groups
+mongodb  
+mysql
+
+[app:children] # If you want to push the updates to entire APP tier or backend tier then we will refer this 
+cart
+user
+
+#So this is we're we will mention all the nodes managing by ansible 

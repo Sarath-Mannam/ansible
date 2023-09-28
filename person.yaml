@@ -1,0 +1,32 @@
+# list of persons
+- name: sarath mannam
+  dob: 01-01-1999
+  # below address is the map
+  address:
+    city: hyd
+    country: IND
+    dno: 01-376
+    street: vedayapalem
+  addresses:           # In yaml list starts with - hyphen, this is list of addresses 
+  - type: perm
+    city: hyd
+    country: india
+  - type: current
+    city: nlr
+    coutry: india
+# this is the list of second person 
+- name: dhoni
+  dob: 01-01-1999
+  # below address is the map
+  address:
+    city: hyd
+    country: IND
+    dno: 01-376
+    street: vedayapalem
+  addresses:           # In yaml list starts with - hyphen, this is list of addresses 
+  - type: perm
+    city: hyd
+    country: india
+  - type: current
+    city: nlr
+    coutry: india
