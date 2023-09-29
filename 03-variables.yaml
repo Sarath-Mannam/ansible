@@ -1,7 +1,7 @@
 - name: variables in ansible
   hosts: mongodb
   vars: # This is play level variables, map
-    COURSE: DevOps
+    COURSE: DevOps with AWS
     DURATION: 110 Hours
   tasks:
   - name: print hello world
