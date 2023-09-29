@@ -1,5 +1,5 @@
 - name: Intall and Run nginx  # name of playbook and it is not mandatory just for best practice
-  nosts: mongodb 
+  hosts: mongodb 
   tasks:  # list of tasks
   - name: Install nginx
     ansible.builtin.yum: # this is the module / collection to install nginx
