@@ -1,0 +1,13 @@
+- name: Intall and Run nginx  # name of playbook and it is not mandatory just for best practice
+  nosts: mongodb 
+  tasks:  # list of tasks
+  - name: Install nginx
+    ansible.builtin.yum: # this is the module / collection to install nginx
+      name: nginx # name of the package
+      state: installed # Install nginx
+  - name: start nginx
+    ansible.builtin.service: # tis is the module to start nginx service
+      name: nginx
+      state: started
+
+
