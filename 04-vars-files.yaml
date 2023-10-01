@@ -1,0 +1,10 @@
+# vars from files is nothing but will keep the variables in a single yaml file and refer it inside the playbook.
+- name: variables from files #name of the playbook
+  hosts: localhost # Considering the local host to manage the ansible server
+  vars_file: 
+  - variables.yaml # Since variables.yaml file is in same directory of 04-vars-files.yaml, so we are giving like this
+  tasks: 
+  - name: printing variables
+    ansible.builtin.debug:
+    msg: "We are learning {{NAME}}, Duration is: {{Duration}}"
+

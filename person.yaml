@@ -1,7 +1,7 @@
 # list of persons
-- name: sarath mannam
+- name: sarath mannam  # representing in key value pair
   dob: 01-01-1999
-  # below address is the map
+  # below address representing in map
   address:
     city: hyd
     country: IND
