@@ -1,13 +1,12 @@
-# Capturing values of variables at runtime
-- name: variables from prompt
+- name: variables from prompt # Capturing values of variables at runtime
   hosts: localhost
   vars_prompt:
   - name: USERNAME
     prompt: please enter your username
     private: false  # means you can see the value that you entering on the terminal
   - name: PASSWORD
-   prompt: please enter your password
-   private: true   # means you can't see the value that you entering on the terminal
+    prompt: please enter your password
+    private: true   # means you can't see the value that you entering on the terminal
   tasks:
   - name: print variable values
     ansible.builtin.debug:
