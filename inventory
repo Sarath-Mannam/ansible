@@ -4,6 +4,12 @@
 [mongodb] # This server belongs to mongodb group
 roboshop-us-dev-db-mongodb-01.sarathmannam.online
 
+[mongodb:vars] # This variable will be useful for the mongodb host
+MONGO_USERNAME=mongodbadmin
+MONGO_DB=categories   # Database name
+# These variables will be useful for all the hosts under the Mongodb group
+# Generally if we getting to much traffic then we need to increase mongodb instancces at that case keep common variables for all the hosts in   this inventory.
+
 [mysql] # This server belongs to mysql group
 roboshop-us-dev-db-mysql-01.sarathmannam.online
 roboshop-us-dev-db-mysql-02.sarathmannam.online
