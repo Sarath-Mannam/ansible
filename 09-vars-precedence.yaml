@@ -1,7 +1,7 @@
 - name: testing variable precedence
   hosts: mongodb  # Because we are referring inventory as well
-  vars:
-    NAME: Mannam-play
+  # vars:
+  #   NAME: Mannam-play
   # vars_files:
   # - variables.yaml
   # vars_prompt:
