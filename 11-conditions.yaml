@@ -2,9 +2,12 @@
   hosts: localhost
   tasks:
   - name: check roboshop user exist or not
-    ansible.builtin.command: id roboshop # Whenever you want to run linux commands directly i.e in the case ansible module is not available 
+    # Whenever you want to run linux commands directly i.e in the case ansible module is not available
+    # When the user does not exist, ansible will treat this as failure and comes out by default, So we have to ignore errors.
+    ansible.builtin.command: id roboshop
     register: output # Here output is name of the variable
-# So Ansible will run this { id roboshop } command and it will store the output in this output variable.
+    ignore_errors: true # ansible will proceed even it faces with error at this stage
+    # So Ansible will run this { id roboshop } command and it will store the output in this output variable.
   - name: print the command output
     ansible.builtin.debug:
       msg: "output is: {{output}}"
