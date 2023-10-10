@@ -1,0 +1,11 @@
+- name: create user
+  hosts: localhost
+  tasks:
+  - name: check roboshop user exist or not
+    ansible.builtin.command: id roboshop # Whenever you want to run linux commands directly i.e in the case ansible module is not available 
+    register: output # Here output is name of the variable
+# So Ansible will run this { id roboshop } command and it will store the output in this output variable.
+  - name: print the command output
+    ansible.builtin.debug:
+      msg: "output is: {{output}}"
+
