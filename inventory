@@ -1,9 +1,6 @@
 192.168.2.1
 172.35.36.96
 
-<!-- [mongodb] # This server belongs to mongodb group
-roboshop-us-dev-db-mongodb-01.sarathmannam.online -->
-
 [mongodb]
 172.31.27.159
 
