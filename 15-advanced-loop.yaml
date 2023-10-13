@@ -9,7 +9,7 @@
     # list of map
     loop:
     - {name: 'nginx', state: 'absent'} # here i want to remove nginx that's why we have status as absent
-    - {name: 'postfix', state: 'istalled'} # here i want to install postfix package
+    - {name: 'postfix', state: 'installed'} # here i want to install postfix package
     - {name: 'cyrus-sasl-plain', state: 'absent'}
     - {name: 'mailx', state: 'installed'}
 
