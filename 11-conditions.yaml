@@ -18,6 +18,8 @@
     become: yes # give sudo access for this task to create the roboshop user
     ansible.builtin.user:
       name: roboshop
-    when: output.rc != 0
+    when: output.rc != 0 # if this expression is true then only this module will run.
+
+    
 
 

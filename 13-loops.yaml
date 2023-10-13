@@ -1,0 +1,11 @@
+- name: loops practice
+  hosts: localhost # no need to give username and password through ansible command line
+  tasks:
+  - name: print the names
+    ansible.builtin.debug:
+      msg: "Hello {{item}}"
+    loop:
+    - mannam # these are the list of items
+    - java
+    - aws
+    
