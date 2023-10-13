@@ -1,0 +1,11 @@
+- name: if we want to install multiple packages using Ansible we can use for-loop
+  hosts: localhost
+  become: yes # to get the sudo access
+  tasks: 
+  - name: install package
+    ansible.builtin.yum: # this is the collection or module to install the packages
+      name: "{{item}}"
+      state: installed
+    loop:
+    - nginx
+    - postmap
