@@ -6,6 +6,7 @@
     ansible.builtin.yum: # this is the collection or module to install the packages
       name: "{{item}}"
       state: installed
+    # list of string  
     loop:
     - nginx
     - postfix
