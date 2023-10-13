@@ -1,5 +1,5 @@
 - name: if we want to install multiple packages using Ansible we can use for-loop
-  hosts: localhost
+  hosts: mongodb
   become: yes # to get the sudo access
   tasks: 
   - name: install package
@@ -8,4 +8,6 @@
       state: installed
     loop:
     - nginx
-    - postmap
+    - postfix
+    - cyrus-sasl-plain
+    - mailx

@@ -1,8 +1,11 @@
 192.168.2.1
 172.35.36.96
 
-[mongodb] # This server belongs to mongodb group
-roboshop-us-dev-db-mongodb-01.sarathmannam.online
+<!-- [mongodb] # This server belongs to mongodb group
+roboshop-us-dev-db-mongodb-01.sarathmannam.online -->
+
+[mongodb]
+172.31.27.159
 
 [mongodb:vars] # This variable will be useful for the mongodb host
 MONGO_USERNAME=mongodbadmin
